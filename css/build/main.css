@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+html {
+  background-image: url(../../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 180px;
+  height: 180px;
+  color: white;
+  font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+  font-size: 2em;
+  border-radius: 50%;
+  border: 4px solid white;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  content: "";
+  background-image: url(../../img/blurred.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+a:hover::before {
+  opacity: 1;
+}
+
